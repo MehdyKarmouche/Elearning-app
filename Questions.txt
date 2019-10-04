@@ -1,0 +1,2 @@
+-Display dynamically from backend
+-Connect backend with front
