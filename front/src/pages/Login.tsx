@@ -1,7 +1,26 @@
 import React from 'react';
-import { IonContent, IonButton, IonInput, IonHeader, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import {useIonViewDidEnter,IonCheckbox, IonContent, IonButton, IonInput, IonHeader, IonItem, IonLabel, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import './login.css';
+
+
+
 const Login: React.FC = () => {
+  /*useIonViewDidEnter(() => {
+    console.log('ionViewDidEnter event fired');
+    fetch('https://localhost:3000/index')
+    .then(results =>{
+      return results.json();
+    }).then(data =>{
+      let pictures = data.results.map((pic)=>{
+        return(
+          <div key={pic.results}>
+            <img src="pic.picture.medium"/>
+
+          </div>
+        )
+      });
+    })
+  });*/
     return (
       <IonPage>
 

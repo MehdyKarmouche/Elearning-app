@@ -6,6 +6,7 @@ var logger = require('morgan');
 var mongoose= require('mongoose');
 var passport = require('passport');
 var session = require('express-session');
+var cors = require('cors');
 require('./config/passport')(passport);
 
 var indexRouter = require('./routes/index');
@@ -14,6 +15,8 @@ var signupRouter = require('./routes/signup');
 var loginRouter = require('./routes/login');
 
 var app = express();
+
+app.use(cors());
 
 //connect to database
 var mongoDB =  'mongodb+srv://synchro:synchro123@cluster0-bziny.mongodb.net/front?retryWrites=false&w=majority';

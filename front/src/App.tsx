@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Redirect, Route } from 'react-router-dom';
+import axios from 'axios';
 import {
   IonApp,
   IonIcon,
@@ -18,7 +19,8 @@ import Details from './pages/Details';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
-import Story1 from './pages/Story1';
+import Story from './pages/Story';
+import Test from './pages/Test';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -51,7 +53,8 @@ const App: React.FC = () => (
           <Route path="/login" component={Login}/>
           <Route path="/signup" component={Signup}/>
           <Route path="/dash" component={Dashboard}/>
-          <Route path="/story1" component={Story1}/>
+          <Route path="/story" component={Story}/>
+          <Route path="/test" component={Test}/>
           <Route exact path="/" render={() => <Redirect to="/tab1" />} />
         </IonRouterOutlet>
         <IonTabBar selectedTab="selected-tab" slot="bottom">

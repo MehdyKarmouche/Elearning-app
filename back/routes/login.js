@@ -5,6 +5,7 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 var passport = require('passport');
 var Student = require('../models/Student');
+const { ensureAuthenticated } = require('../config/secureContent');
 var email;
 
 router.post('/', (req, res, next) => {
@@ -16,7 +17,7 @@ router.post('/', (req, res, next) => {
   })(req, res, next);
 });
 
-router.get('/logged', (req, res, next)=>{
+router.get('/logged',ensureAuthenticated, (req, res, next)=>{
   res.render('index',{email:email});
 
 });
