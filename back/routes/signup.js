@@ -56,7 +56,7 @@ router.post('/',[
                               newStudent
                                 .save()
                                 .then(user => {
-                                  res.redirect('/index');
+                                  res.redirect('http://localhost:8100/login');
                                 })
                                 .catch(err => console.log(err));
                             });

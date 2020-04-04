@@ -12,7 +12,7 @@ router.post('/', (req, res, next) => {
   email = req.body.email;
   console.log("post accessed");
   passport.authenticate('client-local', {
-    successRedirect: '/login/logged',
+    successRedirect: 'http://localhost:8100/dash',
     failureRedirect: '/index'
   })(req, res, next);
 });
@@ -24,7 +24,7 @@ router.get('/logged',ensureAuthenticated, (req, res, next)=>{
 
 router.get('/logout', (req, res) => {
   req.logout();
-  res.redirect('/index/logouttest');
+  res.redirect('http://localhost:8100/login');
 });
 
 

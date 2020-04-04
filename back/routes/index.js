@@ -18,8 +18,8 @@ router.get('/get', function(req, res, next) {
   res.send('Incorrect cridentals');
 });
 router.post('/quiz', function(req, res, next){
-  
   console.log(req.body);
+  res.redirect("http://localhost:8100/dash")
 });
 
 router.get('/story', function(req, res, next) {
