@@ -19,7 +19,7 @@ var app = express();
 app.use(cors());
 
 //connect to database
-var mongoDB =  'mongodb+srv://synchro:synchro123@cluster0-bziny.mongodb.net/front?retryWrites=false&w=majority';
+var mongoDB =  '';
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDb connected"))
   .catch(err => console.log(err));
